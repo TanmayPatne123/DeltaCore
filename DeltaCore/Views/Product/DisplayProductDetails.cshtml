@@ -1,0 +1,43 @@
+﻿@model IEnumerable<DeltaCore.Models.ProductsService>
+
+@{
+    ViewData["Title"] = "DeltaCore";
+}
+
+<h1>DeltaCore</h1>
+
+<div class="table-responsive">
+
+    <table class="table table-bordered table-condensed table-striped">
+        <thead>
+            <tr class="bg-danger">
+                <th>
+                    @Html.DisplayNameFor(model => model.intProductId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.strName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.strDescription)
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.intProductId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.strName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.strDescription)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
